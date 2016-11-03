@@ -31,6 +31,14 @@ public class Node {
 
 	}
 
+	public Node(){
+		this.position = new Vector3(0,0,0);
+		this.neighbors = new ArrayList();
+	}
+
+	public override bool Equals(Node n){
+		return position == n.position;
+	}
 
 	// Use this for initialization
 	void Start () {

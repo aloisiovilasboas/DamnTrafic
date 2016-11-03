@@ -4,12 +4,12 @@ using System.Collections;
 
 public class Caminhos : MonoBehaviour {
 
-	private Node n;
 	public float carHeight;
 	public int mapSize;
 	public int blockSize;
 
 	private int[][] mapa ;
+	private Node graph;
 
 	private static int SROADX = 1; 
 	private static int SROADZ = 2;
@@ -37,7 +37,6 @@ public class Caminhos : MonoBehaviour {
 
 
 	void fillMap(){
-
 		for (int i = 0; i < transform.childCount; i++) {
 			Transform child = transform.GetChild (i);
 			if (child.tag == "sroadX" || child.tag == "sroadZ")
@@ -62,11 +61,14 @@ public class Caminhos : MonoBehaviour {
 					mapa [posX] [posZ] = SROADZ;
 					Debug.Log ("Road z added: "+posX+ " "+posZ);
 				}
-
-				
 			}
-
 		}
+	}
+
+	void fillGraph(){
+		graph = new Node ();
+		//TO DO
+
 	}
 
 
