@@ -66,7 +66,7 @@ public class Caminhos : MonoBehaviour {
 	}
 
 	void fillGraph(){
-		graph = new Node ();
+	//	graph = new Node ();
 		//TO DO
 
 	}
